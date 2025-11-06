@@ -1,0 +1,64 @@
+[
+
+  {
+  "restaurants":
+    {
+    "title": "Рестораны и Кафэ",
+    "text_path": "content/activities/restaurants_ru.txt",
+    "links": 
+     [
+      {"kvishtish": "Квиш 90"},
+      {"tibis": "Тибис"},
+      {"abusalah": "Абу Салах"},
+      {"parasado": "Парасадо"},
+      {"cocen": "Кафэ Кокэн"}
+     ]
+   }
+ },
+ 
+ {
+  "stores":
+    {
+    "title": "Магазины",
+    "text_path": "content/activities/stores_ru.txt",
+    "links": 
+     [
+      {"shufersal": "Супермаркет Шуферсаль"},
+      {"amiad": "Ларек Амиад"},
+      {"twentyfourseven": "Магазин 24/7"}
+     ]
+    }
+  },
+  
+  {
+  "travel":
+    {
+    "title": "Путешествие",
+    "text_path": "content/activities/travel_ru.txt",
+    "links": 
+     [
+      {"hokok_beach": "Hokok Beach"},
+      {"nahal_amud": "Amud River"},
+      {"butayha": "Butayha"},
+      {"quazrin_pools": "Quazrin Pools"},
+      {"hahula": "Hahula Valley"},
+      {"ein_tina": "Ein-Tina"},
+      {"waterfall": "Ait Waterfall"},
+      {"kayakim": "Kayaks"}
+     ]
+    }
+  },
+  
+  {
+  "around_chorazim":
+    {
+    "title": "В округе",
+    "text_path": "content/activities/around_chorazim_ru.txt",
+    "links": 
+     [
+      {"ein_dvir": "Эин Двир"}
+     ]
+    }
+  }
+  
+]

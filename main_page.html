@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bed&Bread - info page</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="lang-buttons">
+        <button onclick="changeLanguage('en')">English</button>
+        <button onclick="changeLanguage('he')">עברית</button>
+        <button onclick="changeLanguage('ru')">Русский</button>
+    </div>
+
+   <div id="overlay" class="overlay">
+        <img id="overlay-img" class="overlay-img" src="">
+    </div>
+        
+    <header id="main-page-header" class="dir-sensitive">
+        <h1 id="main-page-header-title"></h1>
+        <div id="main-page-header-link-buttons">
+            <nav>
+                <ul>
+                    <li><button onclick="goTo('info')" id="info"></button></li>
+                    <li><button onclick="goTo('activities')" id="activities"></button></li>
+                    <li><button onclick="goTo('photos')" id="photos"></button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+     <section id="main-page-summary-section" class="dir-sensitive">
+            <p id="main-page-summary"></p>
+    </section>
+
+    <section>
+        <div class="image-row" id="images"></div>
+    </section>
+
+    <footer class="dir-sensitive">
+        <p id="contactTitle"></p>
+        <p id="contactAddress"></p>
+        <p id="contactPhone1"></p>
+        <p id="contactPhone2"></p>
+    </footer>
+    
+    <script type="module" src="./main_page.js"></script>
+</body>
+</html>
+
+    
+
+
+
+

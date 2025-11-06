@@ -1,0 +1,92 @@
+{
+
+  "rules":
+    {
+     "images":
+      [
+      "assets/images/info/rules_smoking.png",
+      "assets/images/info/rules_step.png",
+      "assets/images/info/rules_fire.png",
+      "assets/images/info/rules_dogs.png"
+      ]
+    },
+    
+  "arrival":
+    {
+     "images": 
+      [
+      "assets/images/info/welcome_gate.jpg",
+      "assets/images/info/yellow_gate.jpg",
+      "assets/images/info/key.jpg",
+      "assets/images/info/chip_pad.jpg"
+      ]
+    },
+  
+  "breakfast":
+    {  
+    "images":
+      [
+      "assets/images/info/fridge.jpg"
+      ]
+    },
+ 
+  "shelter":
+    {
+    "images":
+      [
+      "assets/images/info/shelter.jpg"
+      ],
+    "large": true
+    },
+ 
+  "shower":
+    {
+    "images":
+      [
+      "assets/images/info/shower.png"
+      ]
+    },
+  
+  "stove":
+    {
+    "images":
+      [
+      "assets/images/info/stove.png"
+      ]
+    },
+  
+  "tv":
+    {
+    "images":
+      [
+      "assets/images/info/tv.png"
+      ]
+    },
+  
+  "fire":
+    { 
+    "images":
+      [
+      "assets/images/info/wood.jpg",
+      "assets/images/info/projector.jpg"
+      ]
+    },
+ 
+  "trash":
+    {
+    "images": 
+      [
+      "assets/images/info/trash.jpg"
+      ]
+    },
+  
+  "laundry":
+    {
+    "images": 
+      [
+      "assets/images/info/laundry.png"
+      ]
+    }
+    
+}
+   

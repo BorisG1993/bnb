@@ -1,0 +1,83 @@
+[
+ 
+ {
+  "rules":
+    {
+    "title": "House Rules\nand\n Safety",
+    "text_path": "content/info/rules_en.txt"
+    }
+ },
+  
+ {
+ "arrival":
+    { 
+    "title": "Arrival",
+    "text_path": "content/info/arrival_en.txt"
+    }
+  },
+  
+  {
+  "breakfast":
+    {
+    "title": "Breakfast",
+    "text_path": "content/info/breakfast_en.txt"
+    }
+  },
+  
+  {
+  "shelter":
+    {
+    "title": "Bomb Shelter",
+    "text_path": "content/info/shelter_en.txt"
+    }
+  },
+  
+  {
+  "shower":
+    {
+    "title": "Shower",
+    "text_path": "content/info/shower_en.txt"
+    }
+  },
+  
+  {
+  "stove":
+    {
+    "title": "Induction Stove",
+    "text_path": "content/info/stove_en.txt"
+    }
+  },
+  
+  {
+  "tv":
+    {
+    "title": "TV",
+    "text_path": "content/info/tv_en.txt"
+    }
+  },
+  
+  {
+  "fire":
+    {
+    "title": "Fire Pit\nand\nGrill",
+    "text_path": "content/info/fire_en.txt"
+    }
+  },
+  
+  {
+  "trash":
+    {
+    "title": "Trash",
+    "text_path": "content/info/trash_en.txt"
+    }
+  },
+  
+  {
+  "laundry":
+    {
+    "title": "Laundry",
+    "text_path": "content/info/laundry_en.txt"
+    }
+  }
+ 
+]

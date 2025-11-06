@@ -1,0 +1,64 @@
+[
+
+  {
+  "restaurants":
+    {
+    "title": "מסעדות ובתי קפה",
+    "text_path": "content/activities/restaurants_he.txt",
+    "links": 
+     [
+      {"kvishtish": "כביש 90"},
+      {"tibis": "טיביס"},
+      {"abusalah": "אבו סלאח"},
+      {"parasado": "פראסדו"},
+      {"cocen": "כפה כוכן"}
+     ]
+   }
+ },
+ 
+ {
+  "stores":
+    {
+    "title": "חנויות",
+    "text_path": "content/activities/stores_he.txt",
+    "links": 
+     [
+      {"shufersal": "שופרסל"},
+      {"amiad": "חנות קיבוץ עמיעד"},
+      {"twentyfourseven": "חנות 24/7"}
+     ]
+    }
+  },
+  
+  {
+  "travel":
+    {
+    "title": "טיולים",
+    "text_path": "content/activities/travel_he.txt",
+    "links": 
+     [
+      {"hokok_beach": "Hokok Beach"},
+      {"nahal_amud": "Amud River"},
+      {"butayha": "Butayha"},
+      {"quazrin_pools": "Quazrin Pools"},
+      {"hahula": "Hahula Valley"},
+      {"ein_tina": "Ein-Tina"},
+      {"waterfall": "Ait Waterfall"},
+      {"kayakim": "Kayaks"}
+     ]
+    }
+  },
+  
+  {
+  "around_chorazim":
+    {
+    "title": "סביב כורזים",
+    "text_path": "content/activities/around_chorazim_he.txt",
+    "links": 
+     [
+      {"ein_dvir": "עין דביר"}
+     ]
+    }
+  }
+  
+]

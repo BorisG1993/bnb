@@ -1,0 +1,30 @@
+{
+
+  "restaurants":
+    {
+    "images": ["assets/images/activities/dining.png"]
+    },
+  
+  "stores":
+    {
+    "images": ["assets/images/activities/groceries.jpg"]
+    },
+ 
+  "travel":
+    {
+    "images": ["assets/images/activities/travel.jpg"]
+    },
+    
+  "around_chorazim":
+    {
+    "images": 
+    ["assets/images/activities/ein_dvir.jpg",
+     "assets/images/activities/round_trip.jpg"
+    ],
+    "large": true
+    }
+    
+    
+ }
+  
+

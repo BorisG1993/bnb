@@ -1,0 +1,64 @@
+[
+
+ {
+  "restaurants":
+    {
+    "title": "Restaurants\nand\nCoffee",
+    "text_path": "content/activities/restaurants_en.txt",
+    "links": 
+     [
+      {"kvishtish": "Kvish 90"},
+      {"tibis": "Tibis"},
+      {"abusalah": "Abu-Salah"},
+      {"parasado": "Parasado"},
+      {"cocen": "Cafe Cocen"}
+     ]
+   }
+ },
+
+  {
+  "stores":
+    {
+    "title": "Stores",
+    "text_path": "content/activities/stores_en.txt",
+    "links": 
+     [
+      {"shufersal": "Shufersal Supermarket"},
+      {"amiad": "Amiad Store"},
+      {"twentyfourseven": "24/7 Store"}
+     ]
+    }
+  },
+  
+  {
+  "travel":
+    {
+    "title": "Travel",
+    "text_path": "content/activities/travel_en.txt",
+    "links": 
+     [
+      {"hokok_beach": "Hokok Beach"},
+      {"nahal_amud": "Amud River"},
+      {"butayha": "Butayha"},
+      {"quazrin_pools": "Quazrin Pools"},
+      {"hahula": "Hahula Valley"},
+      {"ein_tina": "Ein-Tina"},
+      {"waterfall": "Ait Waterfall"},
+      {"kayakim": "Kayaks"}
+     ]
+    }
+  },
+  
+  {
+  "around_chorazim":
+    {
+    "title": "Around Chorazim",
+    "text_path": "content/activities/around_chorazim_en.txt",
+    "links": 
+     [
+      {"ein_dvir": "Ein Dvir"}
+     ]
+    }
+  }
+ 
+]

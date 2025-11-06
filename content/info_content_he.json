@@ -1,0 +1,83 @@
+[
+ 
+ {
+  "rules":
+    {
+    "title": "כללים ובטיחות",
+    "text_path": "content/info/rules_he.txt"
+    }
+ },
+  
+ {
+ "arrival":
+    { 
+    "title": "הגעה",
+    "text_path": "content/info/arrival_he.txt"
+    }
+  },
+  
+  {
+  "breakfast":
+    {
+    "title": "ארוחת בוקר",
+    "text_path": "content/info/breakfast_he.txt"
+    }
+  },
+  
+  {
+  "shelter":
+    {
+    "title": "התמגנות",
+    "text_path": "content/info/shelter_he.txt"
+    }
+  },
+  
+  {
+  "shower":
+    {
+    "title": "מקלחת",
+    "text_path": "content/info/shower_he.txt"
+    }
+  },
+  
+  {
+  "stove":
+    {
+    "title": "כירת אינדוקציה",
+    "text_path": "content/info/stove_he.txt"
+    }
+  },
+  
+  {
+  "tv":
+    {
+    "title": "טלויזיה",
+    "text_path": "content/info/tv_he.txt"
+    }
+  },
+  
+  {
+  "fire":
+    {
+    "title": "מדורה ומגנל",
+    "text_path": "content/info/fire_he.txt"
+    }
+  },
+  
+  {
+  "trash":
+    {
+    "title": "פחים",
+    "text_path": "content/info/trash_he.txt"
+    }
+  },
+  
+  {
+  "laundry":
+    {
+    "title": "כביסה",
+    "text_path": "content/info/laundry_he.txt"
+    }
+  }
+ 
+]

@@ -1,0 +1,5 @@
+- LEFT valve is for HOT water.
+- RIGHT valve is for COLD water.
+- MIDDLE valve opens the flow to the other two and should remain OPEN, no need to close it.
+
+The boiler is turned on automatically, touching the boiler panel is unnecessary.
