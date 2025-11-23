@@ -1,15 +1,10 @@
 {
     "title": "Welcome to Bed & Bread Information Page",
     "info": "Info",
-    "gallery": "Gallery",
     "activities": "Activities",
-    "summary_title": "About Our Place",
+    "summary_title": "",
     "summary": "ADD SUMMARY",
-    "images": ["images/img1.jpg", 
-        "images/img2.jpg", 
-        "images/img3.jpg"
-    ],
-    "contact_title": "Contact Information",
+    "contact_title": "",
     "contact": {
         "address": "שיאון 2‚ כורזים",
         "phone1": "Boris: +972546501014",

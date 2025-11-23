@@ -1,0 +1,164 @@
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FFF8F0; 
+    margin: 0;
+    padding: 0;
+    color: #4B3832; 
+}
+
+header {
+    background: linear-gradient(135deg, #B3541E, #FFDAB3);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    position: relative;  
+    z-index: 2;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4); 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #FFF5E6; 
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD1A9; 
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 40px 20px;
+}
+
+.image-row img {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-row img:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+section h2 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: #D2691E; 
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+section p {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+    line-height: 1.7;
+    font-size: 1.1rem;
+    color: #4B3832; /* warm brown text */
+}
+
+footer {
+    background-color: #F2E6D0; /* light cream footer */
+    color: #4B3832;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-top: 1px solid #E0CDA9;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
+}Welcome to Bed & Bread Information Pa
+
+footer h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+footer p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+.lang_buttons {
+    margin: 20px auto 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.lang_buttons button {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 25px;
+    background: transparent;
+    color: black;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.lang_buttons button:hover {
+    background: transparent; 
+    transform: translateY(-2px);
+}
+
+/* Small screens adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .image-row img {
+        max-width: 90%;
+    }
+}
+
+.link_buttons button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+.link_buttons button:hover {
+    background: transparent; 
+    transform: translateY(-4px);
+}
+
