@@ -1,11 +1,34 @@
-let currentLang = "he"
+import { PageLoader } from "./utils.js";
+const pageLoader = new PageLoader();
+pageLoader.contentPathPrefix = "content/main_page_content_";
+pageLoader.mediaPath = "content/main_page_images.json";
 
-let eng_content = "content/main_page_content_en.json";
-let heb_content = "content/main_page_content_he.json";
+function loadPage() {
+    pageLoader.loadContent(pageLoader.getContentPath(), renderContent);
+    pageLoader.loadContent(pageLoader.mediaPath, renderImages);
+}
 
-function loadAll() {
-    loadContent();
-    loadImages();
+function renderContent(data) {
+    document.getElementById("title").textContent = data.title;
+    document.getElementById("info").textContent = data.info;
+    document.getElementById("activities").textContent = data.activities;
+    document.getElementById("summaryTitle").textContent = data.summary_title;
+    
+    pageLoader.readText(data.summary_text_link, (text) => {
+        document.getElementById("summary").textContent = text;
+    });
+
+    document.getElementById("contactTitle").textContent = data.contact_title;
+    document.getElementById("contactAddress").textContent = data.contact.address;
+    document.getElementById("contactPhone1").textContent = data.contact.phone1;
+    document.getElementById("contactPhone2").textContent = data.contact.phone2;
+
+    document.querySelectorAll('.dir_sensitive')
+        .forEach(el => el.dir = (localStorage.getItem("currentLanguage") === 'he' ? 'rtl' : 'ltr'));
+}
+
+function renderText(data) {
+    document.getElementById("summary").textContent = data.summary;
 }
 
 function renderImages(data) {
@@ -18,54 +41,19 @@ function renderImages(data) {
     });
 }
 
-function renderContent(data) {
-    document.getElementById("title").textContent = data.title;
-    
-    document.getElementById("info").textContent = data.info;
-    document.getElementById("activities").textContent = data.activities;
-    document.getElementById("summaryTitle").textContent = data.summary_title;
-    document.getElementById("summary").textContent = data.summary;
-    
-    document.getElementById("contactTitle").textContent = data.contact_title;
-    document.getElementById("contactAddress").textContent = data.contact.address;
-    document.getElementById("contactPhone1").textContent = data.contact.phone1;
-    document.getElementById("contactPhone2").textContent = data.contact.phone2;
-    
-    document.querySelectorAll('.dir_sensitive')
-        .forEach(el => el.dir = (currentLang === 'he' ? 'rtl' : 'ltr'));
-
+function changeLanguage(newLang) {
+    pageLoader.setLanguage(newLang);
+    pageLoader.loadContent(pageLoader.getContentPath(), renderContent);
 }
 
-
-function loadContent(){
-    const file_content = currentLang === "en" ? eng_content : heb_content;
-
-    fetch(file_content)
-        .then(res => res.json())
-        .then(data => renderContent(data))
-        .catch(err => console.error("Error loading JSON:", err));
+function goTo(page) {
+    window.location.href = `${page}.html`;
 }
 
-function loadImages(){
-    const file_images = "content/main_page_images.json";
+window.changeLanguage = changeLanguage;
+window.goTo = goTo;
 
-    fetch(file_images)
-        .then(res => res.json())
-        .then(data => renderImages(data))
-        .catch(err => console.error("Error loading JSON:", err));
-}
-
-function setLanguage(lang) {
-    if (currentLang === lang) return;
-    currentLang = lang;
-    loadContent(currentLang);
-}
-
-function goTO(page) {
-    window.location.href = `${page}.html?lang=${currentLang}`;
-}
-
-document.addEventListener("DOMContentLoaded", loadAll);
+document.addEventListener("DOMContentLoaded", loadPage);
 
 
 

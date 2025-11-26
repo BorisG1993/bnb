@@ -1,9 +1,8 @@
 {
-    "title": "ברוכים הבאים למידעון של יחידת האירוח Bed & Bread",
+    "title": "Bed & Bread ברוכים הבאים למידעון של יחידת האירוח",
     "info": "מידע",
     "activities": "פעילויות",
-    "summary_title": "",
-    "summary": "הוסף סיכום",
+    "summary_text_link": "content/main_page/summary_he.txt",
     "contact_title": "",
     "contact": {
         "address": "שיאון 2‚ כורזים",
