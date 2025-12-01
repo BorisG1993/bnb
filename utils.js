@@ -34,3 +34,51 @@ export class PageLoader {
         return `${this.contentPathPrefix}${this.getLanguage()}.json`;
     }
 }
+
+
+function createFrame(className, index, layout, images, text) {
+    
+    const frame = document.createElement("div");
+    frame.className = className; 
+    frame.id =  `${className}${index}`;
+    
+    const imagesDiv = document.createElement("div");
+    imagesDiv.className = "frame-images";
+
+    const textDiv = document.createElement("div");
+    textDiv.className = "frame-text";
+    textDiv.innerText = text;
+
+    images.forEach(src => {
+        const img = document.createElement("img");
+        img.src = src;
+        imageDiv.appendChild(img);
+    });
+
+    switch (layout) {
+        case "left":
+            frame.appendChild(imagesDiv);
+            frame.appendChild(textDiv);
+            break;
+
+        case "right":
+            frame.appendChild(textDiv);
+            frame.appendChild(imagesDiv);
+            break;
+
+        case "text-only":
+            frame.appendChild(textDiv);
+            break;
+
+        case "images-only":
+            frame.appendChild(imagesDiv);
+            break;
+
+        default:
+            console.warn(`Unknown layout "${layout}", using left`);
+            frame.appendChild(imagesDiv);
+            frame.appendChild(textDiv);
+    }
+
+    return frame;
+}

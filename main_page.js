@@ -28,10 +28,6 @@ function renderContent(data) {
         .forEach(el => el.dir = (localStorage.getItem("currentLanguage") === 'he' ? 'rtl' : 'ltr'));
 }
 
-function renderText(data) {
-    document.getElementById("summary").textContent = data.summary;
-}
-
 function renderImages(data) {
     const imagesDiv = document.getElementById("images");
     imagesDiv.innerHTML = "";

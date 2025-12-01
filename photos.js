@@ -36,9 +36,15 @@ async function loadImages() {
                 col.appendChild(wrapper);
                 grid.appendChild(col);
                 break;
-            };
+            }
+            else {
+                console.log(`format ${ext} not found`);
+            }
         }
-        if (!found) break;
+        if (!found) {
+            console.log("end of dir");
+            break;
+        }
         index++;
     }
 }
