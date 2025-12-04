@@ -35,55 +35,102 @@ export class PageLoader {
     }
 }
 
-async function getTextPromise(path) {
-    return fetch(path)
+export class FrameCreator {
+    #pageLoader;
+    #className;
+
+    constructor(pageLoader, className) {
+        this.#pageLoader = pageLoader;
+        this.#className = className;
+
+        this.createFrames = this.createFrames.bind(this);
+    }
+
+    #makeFrame(topic) {
+
+        const frame = document.createElement("div");
+        frame.classList.add("general-frame", topic.class, topic.direction);
+        frame.id = topic.id;
+
+        if (topic.images) {
+            const imagesDiv = document.createElement("div");
+            imagesDiv.className = "frame-images";
+
+            topic.images.forEach(src => {
+                const img = document.createElement("img");
+                img.src = src;
+                imagesDiv.appendChild(img);
+            });
+
+            frame.appendChild(imagesDiv);
+        }
+
+        if (topic.text_path) {
+            const textDiv = document.createElement("div");
+            textDiv.className = "frame-text";
+            getTextPromise(topic.text_path).then(text => {
+                textDiv.innerText  = text;
+            });
+            frame.appendChild(textDiv);
+        }
+
+        if (topic.links) {
+            const linksDiv = document.createElement("div");
+            linksDiv.className = "frame-links";
+
+            topic.links.forEach(linkData => {
+                const link = document.createElement("a");
+                link.href = linkData.href;
+                link.textContent = linkData.name;
+                link.target = "_blank";
+                linksDiv.appendChild(link);
+            });
+
+            frame.appendChild(linksDiv);
+        }
+
+        return frame;
+    }
+
+    async createFrames() {
+        const response = await fetch(this.#pageLoader.getContentPath());
+        const topics = await response.json();
+
+        const directions = ["left", "right"];
+        for (let i = 0; i < topics.length; i++) {
+            const topic = topics[i];
+            const direction = directions[i % directions.length];
+
+            topic.class = this.#className;
+            topic.id = `${this.#className}${i+1}`;
+
+            topic.direction = direction
+
+            document.body.appendChild(this.#makeFrame(topic));
+        }
+    }
+
+    updateLanguage(data) {
+        for (let i = 0; i < data.lenght; i++) {
+            const id = `${this.#className}${i+1}`;
+            const frame = document.getElementById(id);
+            if (!frame) continue;
+        }
+
+        const textDiv = frame.querySelector(".frame-text");
+        if (textDiv) {
+            getTextPromise(data[i].text_path).then(text => {
+                textDiv.innerText  = text;
+            });
+        }
+        
+        const linksDiv = frame.querySelector(".frame-links");
+
+    }
+
+}
+ 
+async function getTextPromise(path) { return fetch(path)
         .then(res => res.text())
         .catch(err => console.error("Error loading text file:", err));
 }
-
-export function makeFrame(className, jsonObj) {
-    
-    const frame = document.createElement("div");
-    frame.classList.add("general-frame", jsonObj.class, jsonObj.direction);
-    
-    if (jsonObj.images) {
-        const imagesDiv = document.createElement("div");
-        imagesDiv.className = "frame-images";
-
-        jsonObj.images.forEach(src => {
-            const img = document.createElement("img");
-            img.src = src;
-            imagesDiv.appendChild(img);
-        });
-
-        frame.appendChild(imagesDiv);
-    }
-
-    if (jsonObj.text_path) {
-        const textDiv = document.createElement("div");
-        textDiv.className = "frame-text";
-        getTextPromise(jsonObj.text_path).then(text => {
-            textDiv.innerText  = text;
-        });
-        frame.appendChild(textDiv);
-    }
-
-    if (jsonObj.links) {
-        const linksDiv = document.createElement("div");
-        linksDiv.className = "frame-links";
-
-        jsonObj.links.forEach(linkData => {
-            const link = document.createElement("a");
-            link.href = linkData.href;
-            link.textContent = linkData.name;
-            link.target = "_blank";
-            linksDiv.appendChild(link);
-        });
-        
-        frame.appendChild(linksDiv);
-    }
-
-    return frame;
-}
-
-

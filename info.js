@@ -1,11 +1,14 @@
-import { PageLoader, makeFrame } from "./utils.js";
+import { PageLoader, FrameCreator } from "./utils.js";
+let frameClassName = "info-frame";
+
 const pageLoader = new PageLoader();
 pageLoader.contentPathPrefix = "content/info_content_";
-pageLoader.mediaPath = "content/info_images.json";
-let frameClassName = "infoFrame";
+
+const frameCreator = new FrameCreator(pageLoader, frameClassName);
+
 
 function loadPage() {
-    pageLoader.loadContent(pageLoader.getContentPath(), createFrames);
+    pageLoader.loadContent(pageLoader.getContentPath(), frameCreator.createFrames);
 }
 
 function changeLanguage(newLang) {
@@ -13,22 +16,10 @@ function changeLanguage(newLang) {
     pageLoader.loadContent(pageLoader.getContentPath(), renderContent);
 }
 
-async function createFrames() {
-    const response = await fetch(pageLoader.getContentPath());
-    const topics = await response.json();
-
-    const directions = ["left", "right"];
-
-    for (let i = 0; i < topics.length; i++) {
-        const topic = topics[i];
-        const direction = directions[i % directions.length];
-
-        topic.class = "info-frame";
-        topic.direction = direction
-
-        document.body.appendChild(makeFrame(frameClassName, topic));
-    }
+function renderContent() {
+    frameCreator.updateLanguage(data);
 }
+
 
 window.changeLanguage = changeLanguage;
 
