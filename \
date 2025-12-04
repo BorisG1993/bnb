@@ -35,7 +35,7 @@ export class PageLoader {
     }
 }
 
-async function getTextPromise(path) {
+export function readText(path) {
     return fetch(path)
         .then(res => res.text())
         .catch(err => console.error("Error loading text file:", err));
@@ -59,12 +59,10 @@ export function makeFrame(className, jsonObj) {
         frame.appendChild(imagesDiv);
     }
 
-    if (jsonObj.text_path) {
+    if (jsonObj.text) {
         const textDiv = document.createElement("div");
         textDiv.className = "frame-text";
-        getTextPromise(jsonObj.text_path).then(text => {
-            textDiv.innerText  = text;
-        });
+        textDiv.innerText = jsonObj.text;
         frame.appendChild(textDiv);
     }
 
@@ -72,11 +70,8 @@ export function makeFrame(className, jsonObj) {
         const linksDiv = document.createElement("div");
         linksDiv.className = "frame-links";
 
-        jsonObj.links.forEach(linkData => {
-            const link = document.createElement("a");
-            link.href = linkData.href;
-            link.textContent = linkData.name;
-            link.target = "_blank";
+        jsonObj.links.forEach(src => {
+            *** code here ***
             linksDiv.appendChild(link);
         });
         
