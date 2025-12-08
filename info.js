@@ -12,11 +12,12 @@ function loadPage() {
 }
 
 function changeLanguage(newLang) {
+    if (pageLoader.getLanguage() === newLang) return;
     pageLoader.setLanguage(newLang);
     pageLoader.loadContent(pageLoader.getContentPath(), renderContent);
 }
 
-function renderContent() {
+function renderContent(data) {
     frameCreator.updateLanguage(data);
 }
 

@@ -50,7 +50,6 @@ export class FrameCreator {
 
         const frame = document.createElement("div");
         frame.classList.add("general-frame", topic.class, topic.direction);
-        frame.id = topic.id;
 
         if (topic.images) {
             const imagesDiv = document.createElement("div");
@@ -102,8 +101,6 @@ export class FrameCreator {
             const direction = directions[i % directions.length];
 
             topic.class = this.#className;
-            topic.id = `${this.#className}${i+1}`;
-
             topic.direction = direction
 
             document.body.appendChild(this.#makeFrame(topic));
@@ -111,21 +108,24 @@ export class FrameCreator {
     }
 
     updateLanguage(data) {
-        for (let i = 0; i < data.lenght; i++) {
-            const id = `${this.#className}${i+1}`;
-            const frame = document.getElementById(id);
+        const frames = document.body.querySelectorAll(".general-frame");
+        for (let i = 0; i < data.length; i++) {
+            const frame = frames[i]
             if (!frame) continue;
-        }
-
-        const textDiv = frame.querySelector(".frame-text");
-        if (textDiv) {
-            getTextPromise(data[i].text_path).then(text => {
-                textDiv.innerText  = text;
-            });
-        }
         
-        const linksDiv = frame.querySelector(".frame-links");
+            const textDiv = frame.querySelector(".frame-text");
+            if (textDiv) {
+                getTextPromise(data[i].text_path).then(text => {
+                    textDiv.innerText  = text;
+                });
+            }
 
+            const linksDiv = frame.querySelector(".frame-links");
+            const links = linksDiv.children;
+            for (let l = 0; l < links.length; l++) {
+                links[l].textContent = data[i].links[l].name;
+            }
+        }
     }
 
 }

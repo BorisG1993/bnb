@@ -39,6 +39,7 @@ function renderImages(data) {
 }
 
 function changeLanguage(newLang) {
+    if (pageLoader.getLanguage() === newLang) return;
     pageLoader.setLanguage(newLang);
     pageLoader.loadContent(pageLoader.getContentPath(), renderContent);
 }
