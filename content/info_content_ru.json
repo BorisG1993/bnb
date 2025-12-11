@@ -1,0 +1,22 @@
+[
+  
+    {
+    "title": "Прибытие",
+    "text_path": "content/info/arrival_ru.txt",
+    "images": [
+      "assets/images/info/welcome_gate.jpg",
+      "assets/images/info/yellow_gate.jpg",
+      "assets/images/info/key.jpg",
+      "assets/images/info/chip_pad.jpg"
+   ]
+  },
+  
+    {
+    "title": "Завтрак",
+    "text_path": "content/info/breakfast_ru.txt",
+    "images": [
+      "assets/images/info/fridge.jpg"
+   ]
+  }
+  
+]

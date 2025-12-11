@@ -9,14 +9,13 @@ function loadPage() {
 }
 
 function renderContent(data) {
-    document.getElementById("title").textContent = data.title;
+    document.getElementById("main-page-header-title").textContent = data.title;
     document.getElementById("info").textContent = data.info;
     document.getElementById("activities").textContent = data.activities;
     document.getElementById("photos").textContent = data.photos;
-    document.getElementById("summaryTitle").textContent = data.summary_title;
     
     pageLoader.readText(data.summary_text_link, (text) => {
-        document.getElementById("summary").textContent = text;
+        document.getElementById("main-page-summary").textContent = text;
     });
 
     document.getElementById("contactTitle").textContent = data.contact_title;

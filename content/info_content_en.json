@@ -1,12 +1,4 @@
 [
-
-  {
-    "title": "Breakfast",
-    "text_path": "content/info/breakfast_en.txt",
-    "images": [
-      "assets/images/info/fridge.jpg"
-   ]
-  },
   
     {
     "title": "Arrival",
@@ -16,6 +8,14 @@
       "assets/images/info/yellow_gate.jpg",
       "assets/images/info/key.jpg",
       "assets/images/info/chip_pad.jpg"
+   ]
+  },
+  
+    {
+    "title": "Breakfast",
+    "text_path": "content/info/breakfast_en.txt",
+    "images": [
+      "assets/images/info/fridge.jpg"
    ]
   }
   
