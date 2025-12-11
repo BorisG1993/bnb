@@ -197,6 +197,7 @@ footer p {
 
 .frame-title {
     display: flex;
+    flex-shrink: 0;
     font-size: 1.15rem;
     font-weight: bold;
     font-family: "Georgia", "Times New Roman", Times, serif; 

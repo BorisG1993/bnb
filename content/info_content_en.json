@@ -1,22 +1,13 @@
 [
   
-    {
+  {
     "title": "Arrival",
-    "text_path": "content/info/arrival_en.txt",
-    "images": [
-      "assets/images/info/welcome_gate.jpg",
-      "assets/images/info/yellow_gate.jpg",
-      "assets/images/info/key.jpg",
-      "assets/images/info/chip_pad.jpg"
-   ]
+    "text_path": "content/info/arrival_en.txt"
   },
   
-    {
+  {
     "title": "Breakfast",
-    "text_path": "content/info/breakfast_en.txt",
-    "images": [
-      "assets/images/info/fridge.jpg"
-   ]
+    "text_path": "content/info/breakfast_en.txt"
   }
   
 ]

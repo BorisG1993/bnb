@@ -13,7 +13,7 @@ export class PageLoader {
             .then(res => res.json())
             .then(data => renderContent(data))
             .catch(err => console.error("Error loading JSON:", err));
-
+ 
         setDir();
     }
 
@@ -30,25 +30,32 @@ export class PageLoader {
 
     setLanguage(lang) {
         localStorage.setItem("lang", lang);
-    }
+  }
 
     getContentPath() {
         return `${this.contentPathPrefix}${this.getLanguage()}.json`;
     }
 }
 
+
+
+
+const infoImagesPath = "assets/images/info/info_images.json";
+
 export class FrameCreator {
     #pageLoader;
     #className;
+    #imagesPath;
 
-    constructor(pageLoader, className) {
+    constructor(pageLoader, className, imagesPath = infoImagesPath) {
         this.#pageLoader = pageLoader;
         this.#className = className;
-
+        this.#imagesPath = imagesPath;
+        
         this.createFrames = this.createFrames.bind(this);
     }
 
-    #makeFrame(topic) {
+    #makeFrame(topic, topic_images) {
 
         const frame = document.createElement("div");
         frame.classList.add("general-frame", topic.class, topic.direction);
@@ -60,11 +67,11 @@ export class FrameCreator {
             frame.appendChild(titleDiv);
         }
 
-        if (topic.images) {
+        if (topic_images) {
             const imagesDiv = document.createElement("div");
             imagesDiv.className = "frame-images";
 
-            topic.images.forEach(src => {
+            topic_images.forEach(src => {
                 const img = document.createElement("img");
                 img.src = src;
                 imagesDiv.appendChild(img);
@@ -102,8 +109,10 @@ export class FrameCreator {
     }
 
     async createFrames() {
-        const response = await fetch(this.#pageLoader.getContentPath());
+        let response = await fetch(this.#pageLoader.getContentPath());
         const topics = await response.json();
+        response = await fetch(this.#imagesPath);
+        const images = await response.json();
 
         const directions = ["left", "right"];
         for (let i = 0; i < topics.length; i++) {
@@ -113,7 +122,7 @@ export class FrameCreator {
             topic.class = this.#className;
             topic.direction = direction
 
-            document.body.appendChild(this.#makeFrame(topic));
+            document.body.appendChild(this.#makeFrame(topic, images[i].images));
         }
 
         setDir();
