@@ -24,9 +24,7 @@ function renderContent(data) {
     document.getElementById("contactPhone1").textContent = data.contact.phone1;
     document.getElementById("contactPhone2").textContent = data.contact.phone2;
 
-    document.querySelectorAll('.dir_sensitive')
-        .forEach(el => el.dir = (localStorage.getItem("currentLanguage") === 'he' ? 'rtl' : 'ltr'));
-}
+    }
 
 function renderImages(data) {
     const imagesDiv = document.getElementById("images");

@@ -11,15 +11,15 @@
 
 <body>
 
-    <div class="lang_buttons">
+    <div class="lang-buttons">
         <button onclick="changeLanguage('en')">English</button>
         <button onclick="changeLanguage('he')">עברית</button>
         <button onclick="changeLanguage('ru')">Русский</button>
     </div>
         
-    <header class="dir_sensitive">
+    <header id="main-page-header" class="dir-sensitive">
         <h1 id="title"></h1>
-        <div class="link_buttons">
+        <div class="link-buttons">
             <nav>
                 <ul>
                     <li><button onclick="goTo('info')" id="info"></button></li>
@@ -31,7 +31,7 @@
     </header>
 
 
-     <section class="dir_sensitive">
+     <section class="dir-sensitive">
             <h2 id="summaryTitle"></h2>
             <p id="summary"></p>
     </section>
@@ -40,7 +40,7 @@
         <div class="image-row" id="images"></div>
     </section>
 
-    <footer class="dir_sensitive">
+    <footer class="dir-sensitive">
         <h3 id="contactTitle"></h3>
         <p id="contactAddress"></p>
         <p id="contactPhone1"></p>

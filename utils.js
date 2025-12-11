@@ -13,6 +13,8 @@ export class PageLoader {
             .then(res => res.json())
             .then(data => renderContent(data))
             .catch(err => console.error("Error loading JSON:", err));
+
+        setDir();
     }
 
     readText(path, setText) {
@@ -51,6 +53,13 @@ export class FrameCreator {
         const frame = document.createElement("div");
         frame.classList.add("general-frame", topic.class, topic.direction);
 
+        if (topic.title) {
+            const titleDiv = document.createElement("div");
+            titleDiv.classList.add ("frame-title", "dir-sensitive");
+            titleDiv.innerText = topic.title;
+            frame.appendChild(titleDiv);
+        }
+
         if (topic.images) {
             const imagesDiv = document.createElement("div");
             imagesDiv.className = "frame-images";
@@ -66,7 +75,7 @@ export class FrameCreator {
 
         if (topic.text_path) {
             const textDiv = document.createElement("div");
-            textDiv.className = "frame-text";
+            textDiv.classList.add("frame-text", "dir-sensitive");
             getTextPromise(topic.text_path).then(text => {
                 textDiv.innerText  = text;
             });
@@ -80,6 +89,7 @@ export class FrameCreator {
             topic.links.forEach(linkData => {
                 const link = document.createElement("a");
                 link.href = linkData.href;
+                link.textContent.className = "dir-sensitive";   
                 link.textContent = linkData.name;
                 link.target = "_blank";
                 linksDiv.appendChild(link);
@@ -105,6 +115,8 @@ export class FrameCreator {
 
             document.body.appendChild(this.#makeFrame(topic));
         }
+
+        setDir();
     }
 
     updateLanguage(data) {
@@ -112,6 +124,11 @@ export class FrameCreator {
         for (let i = 0; i < data.length; i++) {
             const frame = frames[i]
             if (!frame) continue;
+
+            const titleDiv = frame.querySelector(".frame-title");
+            if (titleDiv) {
+                titleDiv.innerText = data[i].title;
+            }
         
             const textDiv = frame.querySelector(".frame-text");
             if (textDiv) {
@@ -121,11 +138,15 @@ export class FrameCreator {
             }
 
             const linksDiv = frame.querySelector(".frame-links");
-            const links = linksDiv.children;
-            for (let l = 0; l < links.length; l++) {
-                links[l].textContent = data[i].links[l].name;
+            if (linksDiv) {
+                const links = linksDiv.children;
+                for (let l = 0; l < links.length; l++) {
+                    links[l].textContent = data[i].links[l].name;
+                }
             }
         }
+
+        setDir();
     }
 
 }
@@ -134,3 +155,7 @@ async function getTextPromise(path) { return fetch(path)
         .then(res => res.text())
         .catch(err => console.error("Error loading text file:", err));
 }
+
+const setDir = () => 
+    document.querySelectorAll('.dir-sensitive')
+            .forEach(el => el.dir = (localStorage.getItem("lang") === 'he' ? 'rtl' : 'ltr'));

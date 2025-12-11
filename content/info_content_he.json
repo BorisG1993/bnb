@@ -1,16 +1,9 @@
 [
-{
-  "text_path": "content/info/breakfast_he.txt",
-  "images": [
-    "assets/images/info/fridge.jpg"
-  ],
-  "links": [
-      {"href": "google.com",
-       "name": "google2"
-      },
-      {"href": "google.com",
-       "name": "google2"
-      }
-  ]
-}
+  {
+    "title": "ארוחת בוקר",
+    "text_path": "content/info/breakfast_he.txt",
+    "images": [
+      "assets/images/info/fridge.jpg"
+   ]
+  }
 ]

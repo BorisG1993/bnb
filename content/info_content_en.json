@@ -1,16 +1,22 @@
 [
+
   {
+    "title": "Breakfast",
     "text_path": "content/info/breakfast_en.txt",
     "images": [
       "assets/images/info/fridge.jpg"
-    ],
-    "links": [
-        {"href": "google.com",
-         "name": "google"
-        },
-        {"href": "google.com",
-         "name": "google"
-        }
-    ]
+   ]
+  },
+  
+    {
+    "title": "Arrival",
+    "text_path": "content/info/arrival_en.txt",
+    "images": [
+      "assets/images/info/welcome_gate.jpg",
+      "assets/images/info/yellow_gate.jpg",
+      "assets/images/info/key.jpg",
+      "assets/images/info/chip_pad.jpg"
+   ]
   }
+  
 ]
