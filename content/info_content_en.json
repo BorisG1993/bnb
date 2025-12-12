@@ -1,4 +1,9 @@
 [
+
+  {
+    "title": "House Rules\nand\n Safety",
+    "text_path": "content/info/rules_en.txt"
+  },
   
   {
     "title": "Arrival",
@@ -8,6 +13,31 @@
   {
     "title": "Breakfast",
     "text_path": "content/info/breakfast_en.txt"
-  }
+  },
   
+  {
+    "title": "Shower",
+    "text_path": "content/info/shower_en.txt"
+  },
+  
+  {
+    "title": "Induction Stove",
+    "text_path": "content/info/stove_en.txt"
+  },
+  
+  {
+    "title": "TV",
+    "text_path": "content/info/tv_en.txt"
+  },
+  
+  {
+    "title": "Fire Pit",
+    "text_path": "content/info/fire_en.txt"
+  },
+  
+  {
+    "title": "Notes",
+    "text_path": "content/info/notes_en.txt"
+  }
+ 
 ]

@@ -6,7 +6,6 @@ pageLoader.contentPathPrefix = "content/activities_content_";
 
 const frameCreator = new FrameCreator(pageLoader, frameClassName);
 
-
 function loadPage() {
     pageLoader.loadContent(pageLoader.getContentPath(), frameCreator.createFrames);
 }

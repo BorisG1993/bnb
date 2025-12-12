@@ -183,25 +183,29 @@ footer p {
 }
 
 .frame-images img {
-    max-width: 200px;
+    width: 220px;
     height: 200px;
+    padding: 10px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 20px;
 }
 
 .frame-text {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     font-family: "Georgia", "Times New Roman", Times, serif; 
     width: 100%;
+    border: 2px solid #f5cda7;
+    padding: 20px;
 }
 
 .frame-title {
     display: flex;
     flex-shrink: 0;
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     font-weight: bold;
     font-family: "Georgia", "Times New Roman", Times, serif; 
     padding: 20px;
+    text-align: center;
 }
 
 .frame-links {
@@ -225,8 +229,8 @@ footer p {
 
 #main-page-header {
     background: linear-gradient(135deg, #B3541E, #FFDAB3);
-    border-top: 2px solid #f5cda7;
-    border-bottom: 2px solid #f5cda7;
+    border-top: 4px solid #f5cda7;
+    border-bottom: 4px solid #f5cda7;
     padding: 40px 20px;
     text-align: center;
 }
