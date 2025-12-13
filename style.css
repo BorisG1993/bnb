@@ -190,6 +190,11 @@ footer p {
     border-radius: 20px;
 }
 
+.frame-images img.large {
+    width: 440px;
+    height: 400px;
+}
+
 .frame-text {
     font-size: 1.25rem;
     font-family: "Georgia", "Times New Roman", Times, serif; 

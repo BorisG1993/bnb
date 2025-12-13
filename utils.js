@@ -1,11 +1,11 @@
 export class PageLoader {
     
-    #defLang = "he";
+    #defLang;
     contenPathPrefix;
     mediaPath;
 
     constructor() {
-        if (!this.getLanguage()) this.setLanguage(defLang);
+        if (!this.getLanguage()) this.setLanguage(defLang = "he");
     }
     
     loadContent(path, renderContent) {
@@ -71,9 +71,10 @@ export class FrameCreator {
             const imagesDiv = document.createElement("div");
             imagesDiv.className = "frame-images";
 
-            topic_images.forEach(src => {
+            topic_images.images.forEach(src => {
                 const img = document.createElement("img");
                 img.src = src;
+                if (topic_images.large) img.classList.add("large");
                 imagesDiv.appendChild(img);
             });
 
@@ -122,7 +123,7 @@ export class FrameCreator {
             topic.class = this.#className;
             topic.direction = direction
 
-            document.body.appendChild(this.#makeFrame(topic, images[i].images));
+            document.body.appendChild(this.#makeFrame(topic, images[i]));
         }
 
         setDir();
