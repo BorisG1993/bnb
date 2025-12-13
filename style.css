@@ -185,7 +185,7 @@ footer p {
 .frame-images img {
     width: 220px;
     height: 200px;
-    padding: 10px;
+    padding: 5px;
     object-fit: cover;
     border-radius: 20px;
 }

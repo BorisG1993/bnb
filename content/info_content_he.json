@@ -1,4 +1,9 @@
 [
+
+  {
+    "title": "כללים ובטיחות",
+    "text_path": "content/info/rules_he.txt"
+  },
   
   {
     "title": "הגעה",
@@ -8,6 +13,41 @@
   {
     "title": "ארוחת בוקר",
     "text_path": "content/info/breakfast_he.txt"
-  }
+  },
   
+  {
+    "title": "התמגנות",
+    "text_path": "content/info/shelter_he.txt"
+  },
+  
+  {
+    "title": "מקלחת",
+    "text_path": "content/info/shower_he.txt"
+  },
+  
+  {
+    "title": "כירת אינדוקציה",
+    "text_path": "content/info/stove_he.txt"
+  },
+  
+  {
+    "title": "טלויזיה",
+    "text_path": "content/info/tv_he.txt"
+  },
+  
+  {
+    "title": "מדורה ומנגל",
+    "text_path": "content/info/fire_he.txt"
+  },
+  
+  {
+    "title": "פחים",
+    "text_path": "content/info/trash_he.txt"
+  },
+  
+  {
+    "title": "כביסה",
+    "text_path": "content/info/laundry_he.txt"
+  }
+ 
 ]

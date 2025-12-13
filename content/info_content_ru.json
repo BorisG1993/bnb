@@ -1,4 +1,9 @@
 [
+
+  {
+    "title": "Правила\nи\nБезопасность",
+    "text_path": "content/info/rules_ru.txt"
+  },
   
   {
     "title": "Прибытие",
@@ -8,6 +13,41 @@
   {
     "title": "Завтрак",
     "text_path": "content/info/breakfast_ru.txt"
-  }
+  },
   
+  {
+    "title": "Бомбоубежище",
+    "text_path": "content/info/shelter_ru.txt"
+  },
+  
+  {
+    "title": "Душ",
+    "text_path": "content/info/shower_ru.txt"
+  },
+  
+  {
+    "title": "Ииндукционная Плита",
+    "text_path": "content/info/stove_ru.txt"
+  },
+  
+  {
+    "title": "ТВ",
+    "text_path": "content/info/tv_ru.txt"
+  },
+  
+  {
+    "title": "Костер и Мангал",
+    "text_path": "content/info/fire_ru.txt"
+  },
+  
+  {
+    "title": "Мусор",
+    "text_path": "content/info/trash_ru.txt"
+  },
+  
+  {
+    "title": "Стирка",
+    "text_path": "content/info/laundry_ru.txt"
+  }
+ 
 ]

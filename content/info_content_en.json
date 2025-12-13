@@ -16,6 +16,11 @@
   },
   
   {
+    "title": "Bomb Shelter",
+    "text_path": "content/info/shelter_en.txt"
+  },
+  
+  {
     "title": "Shower",
     "text_path": "content/info/shower_en.txt"
   },
@@ -31,13 +36,18 @@
   },
   
   {
-    "title": "Fire Pit",
+    "title": "Fire Pit\nand\nGrill",
     "text_path": "content/info/fire_en.txt"
   },
   
   {
-    "title": "Notes",
-    "text_path": "content/info/notes_en.txt"
+    "title": "Trash",
+    "text_path": "content/info/trash_en.txt"
+  },
+  
+  {
+    "title": "Laundry",
+    "text_path": "content/info/laundry_en.txt"
   }
  
 ]

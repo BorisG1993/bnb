@@ -1,6 +1,7 @@
 [
 
   {
+   "_note": "house rules",
    "images":
     [
       "assets/images/info/rules_smoking.png",
@@ -11,7 +12,8 @@
   },
 
   {
-   "images":
+   "_note": "arrival",
+   "images": 
     [
       "assets/images/info/welcome_gate.jpg",
       "assets/images/info/yellow_gate.jpg",
@@ -21,6 +23,7 @@
   },
   
   {
+  "_note": "breakfast",
   "images":
     [
       "assets/images/info/fridge.jpg"
@@ -28,6 +31,15 @@
   },
   
   {
+  "_note": "shelter",
+  "images":
+    [
+      "assets/images/info/shelter.jpg"
+    ]
+  },
+  
+  {
+  "_note": "shower",
   "images":
     [
       "assets/images/info/shower.png"
@@ -35,6 +47,7 @@
   },
   
   {
+  "_note": "stove",
   "images":
     [
       "assets/images/info/stove.png"
@@ -42,6 +55,7 @@
   },
   
   {
+  "_note": "tv",
   "images":
     [
       "assets/images/info/tv.png"
@@ -49,6 +63,7 @@
   },
   
   {
+  "_note": "fire", 
   "images":
     [
       "assets/images/info/wood.png",
@@ -57,7 +72,19 @@
   },
   
   {
-    "images": []
+   "_note": "trash",
+    "images": 
+    [
+      "assets/images/info/trash.jpg"
+    ]
+  },
+  
+  {
+   "_note": "laundry",
+    "images": 
+    [
+      "assets/images/info/laundry.png"
+    ]
   }
   
 ]
