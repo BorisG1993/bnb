@@ -35,7 +35,8 @@
   "images":
     [
       "assets/images/info/shelter.jpg"
-    ]
+    ],
+    "large": true
   },
   
   {
@@ -66,8 +67,8 @@
   "_note": "fire", 
   "images":
     [
-      "assets/images/info/wood.png",
-      "assets/images/info/projector.png"
+      "assets/images/info/wood.jpg",
+      "assets/images/info/projector.jpg"
     ]
   },
   

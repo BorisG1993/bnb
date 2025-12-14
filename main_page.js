@@ -1,4 +1,4 @@
-import { PageLoader } from "./utils.js";
+import { PageLoader, activateImageOverlay } from "./utils.js";
 const pageLoader = new PageLoader();
 pageLoader.contentPathPrefix = "content/main_page_content_";
 pageLoader.mediaPath = "content/main_page_images.json";
@@ -31,6 +31,7 @@ function renderImages(data) {
     data.images.forEach(src => {
         const img = document.createElement("img");
         img.src = src;
+        activateImageOverlay(img);
         imagesDiv.appendChild(img);
     });
 }

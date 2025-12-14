@@ -94,7 +94,6 @@ footer p {
 
 .overlay {
     position: fixed;
-    border-top: 4px solid #f5cda7; 
     inset: 0;
     display: flex;
     justify-content: center;
@@ -115,7 +114,6 @@ footer p {
 }
 
 .overlay-img {
-    border-top: 4px solid #f5cda7;
     max-width: 90%;
     max-height: 90%;
     border-radius: 10px;

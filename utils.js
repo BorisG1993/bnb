@@ -70,10 +70,12 @@ export class FrameCreator {
         if (topic_images) {
             const imagesDiv = document.createElement("div");
             imagesDiv.className = "frame-images";
-
+            
             topic_images.images.forEach(src => {
+
                 const img = document.createElement("img");
                 img.src = src;
+                activateImageOverlay(img);
                 if (topic_images.large) img.classList.add("large");
                 imagesDiv.appendChild(img);
             });
@@ -169,3 +171,23 @@ async function getTextPromise(path) { return fetch(path)
 const setDir = () => 
     document.querySelectorAll('.dir-sensitive')
             .forEach(el => el.dir = (localStorage.getItem("lang") === 'he' ? 'rtl' : 'ltr'));
+
+
+
+
+export function activateImageOverlay(img) {
+
+    document.getElementById("overlay").addEventListener("click", (e) => {
+        if (e.target.id === "overlay") {
+            e.target.classList.remove("show");
+        }
+    });
+
+  img.addEventListener("click", () => {
+        const overlay = document.getElementById("overlay");
+        const overlayImg = document.getElementById("overlay-img");
+        overlayImg.src = img.src;
+        overlay.classList.add("show");
+    });
+}
+

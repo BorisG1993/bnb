@@ -1,3 +1,4 @@
+import { activateImageOverlay } from "./utils.js";
 let imgDir = `assets/images/photos/`;
 let extensions = ["jpg", "jpeg", "png", "webp"];
 
@@ -24,14 +25,7 @@ async function loadImages() {
                 const img = document.createElement("img")
                 img.src = imgPath;
                 img.className = "img-fluid rounded shadow-sm";
-    
-                img.addEventListener("click", () => {
-                    const overlay = document.getElementById("overlay");
-                    const overlayImg = document.getElementById("overlay-img");
-                    overlayImg.src = img.src;
-                    overlay.classList.add("show");
-                });
-                
+                activateImageOverlay(img);
                 wrapper.appendChild(img);
                 col.appendChild(wrapper);
                 grid.appendChild(col);
@@ -51,8 +45,3 @@ async function loadImages() {
 
 loadImages();
 
-document.getElementById("overlay").addEventListener("click", (e) => {
-    if (e.target.id === "overlay") {
-        e.target.classList.remove("show");
-    }
-});
