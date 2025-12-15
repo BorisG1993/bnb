@@ -1,10 +1,11 @@
 import { PageLoader, FrameCreator } from "./utils.js";
-let frameClassName = "info-frame";
+const frameClassName = "info-frame";
+const infoImagesPath = "assets/images/info/info_images.json";
 
 const pageLoader = new PageLoader();
 pageLoader.contentPathPrefix = "content/info_content_";
 
-const frameCreator = new FrameCreator(pageLoader, frameClassName);
+const frameCreator = new FrameCreator(pageLoader, frameClassName, infoImagesPath);
 
 
 function loadPage() {

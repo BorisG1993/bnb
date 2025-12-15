@@ -1,0 +1,19 @@
+[
+
+  {
+  "restaurants":
+    {
+    "title": "Restaurants\nand\nCoffee",
+    "text_path": "content/activities/restaurants_en.txt",
+    "links": 
+     [
+      {"kvishtish": "Kvish 90"},
+      {"tibis": "Tibis"},
+      {"abusalah": "Abu-Salah"},
+      {"parasado": "Parasado"},
+      {"cocen": "Cafe Cocen"}
+     ]
+   }
+ }
+  
+]

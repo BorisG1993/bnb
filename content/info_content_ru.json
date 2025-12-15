@@ -1,53 +1,83 @@
 [
-
-  {
-    "title": "Правила\nи\nБезопасность",
+ 
+ {
+  "rules":
+    {
+    "title": "Правила и Безопасность",
     "text_path": "content/info/rules_ru.txt"
-  },
+    }
+ },
   
-  {
+ {
+ "arrival":
+    { 
     "title": "Прибытие",
     "text_path": "content/info/arrival_ru.txt"
+    }
   },
   
   {
+  "breakfast":
+    {
     "title": "Завтрак",
     "text_path": "content/info/breakfast_ru.txt"
+    }
   },
   
   {
+  "shelter":
+    {
     "title": "Бомбоубежище",
     "text_path": "content/info/shelter_ru.txt"
+    }
   },
   
   {
+  "shower":
+    {
     "title": "Душ",
     "text_path": "content/info/shower_ru.txt"
+    }
   },
   
   {
-    "title": "Ииндукционная Плита",
+  "stove":
+    {
+    "title": "Индукционная Пли",
     "text_path": "content/info/stove_ru.txt"
+    }
   },
   
   {
+  "tv":
+    {
     "title": "ТВ",
     "text_path": "content/info/tv_ru.txt"
+    }
   },
   
   {
+  "fire":
+    {
     "title": "Костер и Мангал",
     "text_path": "content/info/fire_ru.txt"
+    }
   },
   
   {
+  "trash":
+    {
     "title": "Мусор",
     "text_path": "content/info/trash_ru.txt"
+    }
   },
   
   {
+  "laundry":
+    {
     "title": "Стирка",
     "text_path": "content/info/laundry_ru.txt"
+    }
   }
  
 ]

@@ -213,12 +213,17 @@ footer p {
 
 .frame-links {
     display: flex;
-    border-top: 4px solid #f5cda7;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+    padding: 20px;
+    width: 80%;     
+    max-width: 600px; 
+    margin: 20px auto; 
 }
 
 .frame-links a {
+    font-size: 1.5rem;
+    white-space: nowrap; 
     display: block;
     color: #0077cc;
 }

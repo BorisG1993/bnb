@@ -1,91 +1,92 @@
-[
+{
 
-  {
-   "_note": "house rules",
-   "images":
-    [
+  "rules":
+    {
+     "images":
+      [
       "assets/images/info/rules_smoking.png",
       "assets/images/info/rules_step.png",
       "assets/images/info/rules_fire.png",
       "assets/images/info/rules_dogs.png"
-    ]
-  },
-
-  {
-   "_note": "arrival",
-   "images": 
-    [
+      ]
+    },
+    
+  "arrival":
+    {
+     "images": 
+      [
       "assets/images/info/welcome_gate.jpg",
       "assets/images/info/yellow_gate.jpg",
       "assets/images/info/key.jpg",
       "assets/images/info/chip_pad.jpg"
-    ]
-  },
+      ]
+    },
   
-  {
-  "_note": "breakfast",
-  "images":
-    [
+  "breakfast":
+    {  
+    "images":
+      [
       "assets/images/info/fridge.jpg"
-    ]
-  },
-  
-  {
-  "_note": "shelter",
-  "images":
-    [
+      ]
+    },
+ 
+  "shelter":
+    {
+    "images":
+      [
       "assets/images/info/shelter.jpg"
-    ],
+      ],
     "large": true
-  },
-  
-  {
-  "_note": "shower",
-  "images":
-    [
+    },
+ 
+  "shower":
+    {
+    "images":
+      [
       "assets/images/info/shower.png"
-    ]
-  },
+      ]
+    },
   
-  {
-  "_note": "stove",
-  "images":
-    [
+  "stove":
+    {
+    "images":
+      [
       "assets/images/info/stove.png"
-    ]
-  },
+      ]
+    },
   
-  {
-  "_note": "tv",
-  "images":
-    [
+  "tv":
+    {
+    "images":
+      [
       "assets/images/info/tv.png"
-    ]
-  },
+      ]
+    },
   
-  {
-  "_note": "fire", 
-  "images":
-    [
+  "fire":
+    { 
+    "images":
+      [
       "assets/images/info/wood.jpg",
       "assets/images/info/projector.jpg"
-    ]
-  },
-  
-  {
-   "_note": "trash",
+      ]
+    },
+ 
+  "trash":
+    {
     "images": 
-    [
+      [
       "assets/images/info/trash.jpg"
-    ]
-  },
+      ]
+    },
   
-  {
-   "_note": "laundry",
+  "laundry":
+    {
     "images": 
-    [
+      [
       "assets/images/info/laundry.png"
-    ]
-  }
-  
-]
+      ]
+    }
+    
+}
+   

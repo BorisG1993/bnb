@@ -4,8 +4,10 @@ export class PageLoader {
     contenPathPrefix;
     mediaPath;
 
-    constructor() {
-        if (!this.getLanguage()) this.setLanguage(defLang = "he");
+    constructor(defLang = "he") {
+        this.#defLang = defLang;
+        if (!this.getLanguage()) this.setLanguage(this.#defLang);
+        this.#defLang = defLang;
     }
     
     loadContent(path, renderContent) {
@@ -40,34 +42,35 @@ export class PageLoader {
 
 
 
-const infoImagesPath = "assets/images/info/info_images.json";
-
 export class FrameCreator {
     #pageLoader;
     #className;
     #imagesPath;
+    #linksPath;
 
-    constructor(pageLoader, className, imagesPath = infoImagesPath) {
+    constructor(pageLoader, className, imagesPath = undefined, linksPath = undefined) {
         this.#pageLoader = pageLoader;
         this.#className = className;
         this.#imagesPath = imagesPath;
+        this.#linksPath = linksPath;
         
         this.createFrames = this.createFrames.bind(this);
     }
 
-    #makeFrame(topic, topic_images) {
-
+    #makeFrame(topic, topic_images, links) {
+        
         const frame = document.createElement("div");
         frame.classList.add("general-frame", topic.class, topic.direction);
+        const id = Object.keys(topic)[0];
+        const topic_content = topic[id];
+        frame.id = id;
 
-        if (topic.title) {
-            const titleDiv = document.createElement("div");
-            titleDiv.classList.add ("frame-title", "dir-sensitive");
-            titleDiv.innerText = topic.title;
-            frame.appendChild(titleDiv);
-        }
+        const titleDiv = document.createElement("div");
+        titleDiv.classList.add ("frame-title", "dir-sensitive");
+        titleDiv.innerText = topic_content.title;
+        frame.appendChild(titleDiv);
 
-        if (topic_images) {
+        if (topic_images != undefined) {
             const imagesDiv = document.createElement("div");
             imagesDiv.className = "frame-images";
             
@@ -83,26 +86,28 @@ export class FrameCreator {
             frame.appendChild(imagesDiv);
         }
 
-        if (topic.text_path) {
+        if (topic_content.text_path) {
             const textDiv = document.createElement("div");
             textDiv.classList.add("frame-text", "dir-sensitive");
-            getTextPromise(topic.text_path).then(text => {
+            getTextPromise(topic_content.text_path).then(text => {
                 textDiv.innerText  = text;
             });
             frame.appendChild(textDiv);
         }
 
-        if (topic.links) {
+        if (links != undefined) {
             const linksDiv = document.createElement("div");
             linksDiv.className = "frame-links";
-
-            topic.links.forEach(linkData => {
-                const link = document.createElement("a");
-                link.href = linkData.href;
-                link.textContent.className = "dir-sensitive";   
-                link.textContent = linkData.name;
-                link.target = "_blank";
-                linksDiv.appendChild(link);
+                
+            topic_content.links.forEach(link => {
+                const a = document.createElement("a");
+                const link_id = Object.keys(link)[0];
+                a.href = links[link_id];
+                a.className = "dir-sensitive";  
+                a.id = link_id;
+                a.textContent = link[link_id];
+                a.target = "_blank";
+                linksDiv.appendChild(a);
             });
 
             frame.appendChild(linksDiv);
@@ -114,49 +119,68 @@ export class FrameCreator {
     async createFrames() {
         let response = await fetch(this.#pageLoader.getContentPath());
         const topics = await response.json();
-        response = await fetch(this.#imagesPath);
-        const images = await response.json();
+
+        let images;
+        let links;
+        
+        if (this.#imagesPath != undefined) {
+            response = await fetch(this.#imagesPath);
+            images = await response.json();
+        }
+        
+        if (this.#linksPath != undefined) {
+            response = await fetch(this.#linksPath);
+            links = await response.json();
+        }
 
         const directions = ["left", "right"];
+
         for (let i = 0; i < topics.length; i++) {
             const topic = topics[i];
+            const topic_key = Object.keys(topic)[0];
+            const topic_images = images[topic_key];
             const direction = directions[i % directions.length];
 
-            topic.class = this.#className;
-            topic.direction = direction
-
-            document.body.appendChild(this.#makeFrame(topic, images[i]));
+            topic[topic_key].class = this.#className;
+            topic[topic_key].direction = direction;
+            
+            document.body.appendChild(this.#makeFrame(topic, 
+                                                      topic_images === undefined ?
+                                                      undefined : topic_images, 
+                                                      links === undefined ? 
+                                                      undefined : links));
         }
 
         setDir();
     }
 
     updateLanguage(data) {
-        const frames = document.body.querySelectorAll(".general-frame");
-        for (let i = 0; i < data.length; i++) {
-            const frame = frames[i]
-            if (!frame) continue;
 
+        data.forEach(topic => {
+            
+            const id = Object.keys(topic)[0];
+            const frame = document.getElementById(id);
+                
             const titleDiv = frame.querySelector(".frame-title");
             if (titleDiv) {
-                titleDiv.innerText = data[i].title;
+                titleDiv.innerText = topic[id].title;
             }
         
             const textDiv = frame.querySelector(".frame-text");
             if (textDiv) {
-                getTextPromise(data[i].text_path).then(text => {
+                getTextPromise(topic[id].text_path).then(text => {
                     textDiv.innerText  = text;
                 });
             }
 
             const linksDiv = frame.querySelector(".frame-links");
             if (linksDiv) {
-                const links = linksDiv.children;
-                for (let l = 0; l < links.length; l++) {
-                    links[l].textContent = data[i].links[l].name;
+                for (const link of linksDiv.children) {
+                    const obj = topic[id].links.find(l => l.hasOwnProperty(link.id));
+                    link.textContent =obj[link.id];
                 }
             }
-        }
+        });
 
         setDir();
     }

@@ -1,0 +1,19 @@
+[
+
+  {
+  "restaurants":
+    {
+    "title": "מסעדות ובתי קפה",
+    "text_path": "content/activities/restaurants_he.txt",
+    "links": 
+     [
+      {"kvishtish": "כביש 90"},
+      {"tibis": "טיביס"},
+      {"abusalah": "אבו סלאח"},
+      {"parasado": "פראסדו"},
+      {"cocen": "כפה כוכן"}
+     ]
+   }
+ }
+  
+]
