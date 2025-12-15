@@ -14,6 +14,42 @@
       {"cocen": "כפה כוכן"}
      ]
    }
- }
+ },
+ 
+ {
+  "stores":
+    {
+    "title": "חנויות",
+    "text_path": "content/activities/groceries_he.txt",
+    "links": 
+     [
+      {"shufersal": "שופרסל"},
+      {"amiad": "חנות קיבוץ עמיעד"},
+      {"twentyfourseven": "חנות 24/7"}
+     ]
+    }
+  },
+  
+  {
+  "travel":
+    {
+    "title": "טיולים",
+    "text_path": "content/activities/travel_he.txt",
+    "links": 
+     [
+     ]
+    }
+  },
+  
+  {
+  "ein_dvir":
+    {
+    "title": "עין דביר",
+    "text_path": "content/activities/ein_dvir_he.txt",
+    "links": 
+     [
+     ]
+    }
+  }
   
 ]

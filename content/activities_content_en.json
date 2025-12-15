@@ -1,6 +1,6 @@
 [
 
-  {
+ {
   "restaurants":
     {
     "title": "Restaurants\nand\nCoffee",
@@ -14,6 +14,42 @@
       {"cocen": "Cafe Cocen"}
      ]
    }
- }
+ },
+
+  {
+  "stores":
+    {
+    "title": "Stores",
+    "text_path": "content/activities/groceries_en.txt",
+    "links": 
+     [
+      {"shufersal": "Shufersal"},
+      {"amiad": "Amiad Store"},
+      {"twentyfourseven": "24/7 Store"}
+     ]
+    }
+  },
   
+  {
+  "travel":
+    {
+    "title": "Travel",
+    "text_path": "content/activities/travel_en.txt",
+    "links": 
+     [
+     ]
+    }
+  },
+  
+  {
+  "ein_dvir":
+    {
+    "title": "Ein-Dvir",
+    "text_path": "content/activities/ein_dvir_en.txt",
+    "links": 
+     [
+     ]
+    }
+  }
+ 
 ]

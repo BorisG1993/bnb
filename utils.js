@@ -60,9 +60,11 @@ export class FrameCreator {
     #makeFrame(topic, topic_images, links) {
         
         const frame = document.createElement("div");
-        frame.classList.add("general-frame", topic.class, topic.direction);
+        const topic_key = this.#getKey(topic);
+        frame.classList.add("general-frame", topic[topic_key].class, topic[topic_key].direction);
         const id = Object.keys(topic)[0];
         const topic_content = topic[id];
+
         frame.id = id;
 
         const titleDiv = document.createElement("div");
@@ -78,6 +80,7 @@ export class FrameCreator {
 
                 const img = document.createElement("img");
                 img.src = src;
+                img.classList.add("pressable");
                 activateImageOverlay(img);
                 if (topic_images.large) img.classList.add("large");
                 imagesDiv.appendChild(img);
@@ -101,7 +104,7 @@ export class FrameCreator {
                 
             topic_content.links.forEach(link => {
                 const a = document.createElement("a");
-                const link_id = Object.keys(link)[0];
+                const link_id = this.#getKey(link);
                 a.href = links[link_id];
                 a.className = "dir-sensitive";  
                 a.id = link_id;
@@ -115,6 +118,8 @@ export class FrameCreator {
 
         return frame;
     }
+
+    #getKey = topic => Object.keys(topic)[0];
 
     async createFrames() {
         let response = await fetch(this.#pageLoader.getContentPath());
@@ -137,7 +142,7 @@ export class FrameCreator {
 
         for (let i = 0; i < topics.length; i++) {
             const topic = topics[i];
-            const topic_key = Object.keys(topic)[0];
+            const topic_key = this.#getKey(topic);
             const topic_images = images[topic_key];
             const direction = directions[i % directions.length];
 

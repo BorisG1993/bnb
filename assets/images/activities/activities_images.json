@@ -1,23 +1,25 @@
-[
+{
 
-  {
-   "_note": "stores",
-   "images": []
-  },
-  
-  {
-   "_note": "restaurants",
-   "images": []
-  },
-  
+  "restaurants":
     {
-   "_note": "travel",
-   "images": []
-  },
+    "images": ["assets/images/activities/dining.png"]
+    },
   
-  {
-   "_note": "ein_dvir",
-   "images": []
-  }
+  "stores":
+    {
+    "images": ["assets/images/activities/groceries.jpg"]
+    },
+ 
+  "travel":
+    {
+    "images": ["assets/images/activities/travel.jpg"]
+    },
+    
+  "ein_dvir":
+    {
+    "images": []
+    }
+    
+ }
+  
 
-]
