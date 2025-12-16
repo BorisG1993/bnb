@@ -20,7 +20,7 @@
   "stores":
     {
     "title": "חנויות",
-    "text_path": "content/activities/groceries_he.txt",
+    "text_path": "content/activities/stores_he.txt",
     "links": 
      [
       {"shufersal": "שופרסל"},
@@ -37,17 +37,26 @@
     "text_path": "content/activities/travel_he.txt",
     "links": 
      [
+      {"hokok_beach": "Hokok Beach"},
+      {"nahal_amud": "Amud River"},
+      {"butayha": "Butayha"},
+      {"quazrin_pools": "Quazrin Pools"},
+      {"hahula": "Hahula Valley"},
+      {"ein_tina": "Ein-Tina"},
+      {"waterfall": "Ait Waterfall"},
+      {"kayakim": "Kayaks"}
      ]
     }
   },
   
   {
-  "ein_dvir":
+  "around_chorazim":
     {
-    "title": "עין דביר",
-    "text_path": "content/activities/ein_dvir_he.txt",
+    "title": "סביב כורזים",
+    "text_path": "content/activities/around_chorazim_he.txt",
     "links": 
      [
+      {"ein_dvir": "עין דביר"}
      ]
     }
   }

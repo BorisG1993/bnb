@@ -20,10 +20,10 @@
   "stores":
     {
     "title": "Магазины",
-    "text_path": "content/activities/groceries_ru.txt",
+    "text_path": "content/activities/stores_ru.txt",
     "links": 
      [
-      {"shufersal": "Шуферсаль"},
+      {"shufersal": "Супермаркет Шуферсаль"},
       {"amiad": "Ларек Амиад"},
       {"twentyfourseven": "Магазин 24/7"}
      ]
@@ -37,17 +37,26 @@
     "text_path": "content/activities/travel_ru.txt",
     "links": 
      [
+      {"hokok_beach": "Hokok Beach"},
+      {"nahal_amud": "Amud River"},
+      {"butayha": "Butayha"},
+      {"quazrin_pools": "Quazrin Pools"},
+      {"hahula": "Hahula Valley"},
+      {"ein_tina": "Ein-Tina"},
+      {"waterfall": "Ait Waterfall"},
+      {"kayakim": "Kayaks"}
      ]
     }
   },
   
   {
-  "ein_dvir":
+  "around_chorazim":
     {
-    "title": "Эин-Двир",
-    "text_path": "content/activities/ein_dvir_ru.txt",
+    "title": "В округе",
+    "text_path": "content/activities/around_chorazim_ru.txt",
     "links": 
      [
+      {"ein_dvir": "Эин Двир"}
      ]
     }
   }

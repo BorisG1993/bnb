@@ -15,10 +15,15 @@
     "images": ["assets/images/activities/travel.jpg"]
     },
     
-  "ein_dvir":
+  "around_chorazim":
     {
-    "images": []
+    "images": 
+    ["assets/images/activities/ein_dvir.jpg",
+     "assets/images/activities/round_trip.jpg"
+    ],
+    "large": true
     }
+    
     
  }
   
