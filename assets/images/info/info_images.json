@@ -8,7 +8,8 @@
       "assets/images/info/rules_step.png",
       "assets/images/info/rules_fire.png",
       "assets/images/info/rules_dogs.png"
-      ]
+      ],
+     "small": true
     },
     
   "arrival":
@@ -24,7 +25,7 @@
   
   "breakfast":
     {  
-    "images":
+     "images":
       [
       "assets/images/info/fridge.jpg"
       ]
@@ -32,7 +33,7 @@
  
   "shelter":
     {
-    "images":
+     "images":
       [
       "assets/images/info/shelter.jpg"
       ],
@@ -41,7 +42,7 @@
  
   "shower":
     {
-    "images":
+     "images":
       [
       "assets/images/info/shower.png"
       ]
@@ -49,7 +50,7 @@
   
   "stove":
     {
-    "images":
+     "images":
       [
       "assets/images/info/stove.png"
       ]
@@ -57,7 +58,7 @@
   
   "tv":
     {
-    "images":
+     "images":
       [
       "assets/images/info/tv.png"
       ]
@@ -65,7 +66,7 @@
   
   "fire":
     { 
-    "images":
+     "images":
       [
       "assets/images/info/wood.jpg",
       "assets/images/info/projector.jpg"
@@ -74,7 +75,7 @@
  
   "trash":
     {
-    "images": 
+     "images": 
       [
       "assets/images/info/trash.jpg"
       ]
@@ -82,10 +83,11 @@
   
   "laundry":
     {
-    "images": 
+     "images": 
       [
       "assets/images/info/laundry.png"
-      ]
+      ],
+     "small": true
     }
     
 }

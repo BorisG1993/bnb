@@ -83,6 +83,7 @@ export class FrameCreator {
                 img.classList.add("pressable");
                 activateImageOverlay(img);
                 if (topic_images.large) img.classList.add("large");
+                if (topic_images.small) img.classList.add("small");
                 imagesDiv.appendChild(img);
             });
 
