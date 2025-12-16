@@ -37,14 +37,14 @@
     "text_path": "content/activities/travel_ru.txt",
     "links": 
      [
-      {"hokok_beach": "Hokok Beach"},
-      {"nahal_amud": "Amud River"},
-      {"butayha": "Butayha"},
-      {"quazrin_pools": "Quazrin Pools"},
-      {"hahula": "Hahula Valley"},
-      {"ein_tina": "Ein-Tina"},
-      {"waterfall": "Ait Waterfall"},
-      {"kayakim": "Kayaks"}
+      {"hokok_beach": "Пляж Хокок"},
+      {"nahal_amud": "Река Амуд"},
+      {"butayha": "Бтэха"},
+      {"quazrin_pools": "Бассейны - Кацрин"},
+      {"hahula": "Заповедник Хула"},
+      {"ein_tina": "Эйн Тина"},
+      {"waterfall": "Водопад 'Аит'"},
+      {"kayakim": "Каяки"}
      ]
     }
   },

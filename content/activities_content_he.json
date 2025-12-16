@@ -37,14 +37,14 @@
     "text_path": "content/activities/travel_he.txt",
     "links": 
      [
-      {"hokok_beach": "Hokok Beach"},
-      {"nahal_amud": "Amud River"},
-      {"butayha": "Butayha"},
-      {"quazrin_pools": "Quazrin Pools"},
-      {"hahula": "Hahula Valley"},
-      {"ein_tina": "Ein-Tina"},
-      {"waterfall": "Ait Waterfall"},
-      {"kayakim": "Kayaks"}
+      {"hokok_beach": "חוף חוקוק"},
+      {"nahal_amud": "נחל עמוד"},
+      {"butayha": "בטיחה"},
+      {"quazrin_pools": "בריכות קצרין"},
+      {"hahula": "עמק החולה"},
+      {"ein_tina": "עין תינה"},
+      {"waterfall": "מפל עיט"},
+      {"kayakim": "קייקים"}
      ]
     }
   },

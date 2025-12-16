@@ -2,17 +2,20 @@
 
   "restaurants":
     {
-    "images": ["assets/images/activities/dining.png"]
+    "images": ["assets/images/activities/dining.png"],
+    "small": true
     },
   
   "stores":
     {
-    "images": ["assets/images/activities/groceries.jpg"]
+    "images": ["assets/images/activities/groceries.jpg"],
+    "small": true
     },
  
   "travel":
     {
-    "images": ["assets/images/activities/travel.jpg"]
+    "images": ["assets/images/activities/travel.jpg"],
+    "small": true
     },
     
   "around_chorazim":
