@@ -28,7 +28,8 @@
      "images":
       [
       "assets/images/info/fridge.jpg"
-      ]
+      ],
+     "large": true
     },
  
   "shelter":

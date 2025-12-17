@@ -74,7 +74,7 @@ export class FrameCreator {
 
         if (topic_images != undefined) {
             const imagesDiv = document.createElement("div");
-            imagesDiv.className = "frame-images";
+            imagesDiv.classList.add("frame-images", "dir-sensitive");
             
             topic_images.images.forEach(src => {
 
@@ -101,7 +101,7 @@ export class FrameCreator {
 
         if (links != undefined) {
             const linksDiv = document.createElement("div");
-            linksDiv.className = "frame-links";
+            linksDiv.classList.add("frame-links", "dir-sensitive");
                 
             topic_content.links.forEach(link => {
                 const a = document.createElement("a");

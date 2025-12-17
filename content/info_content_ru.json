@@ -3,7 +3,7 @@
  {
   "rules":
     {
-    "title": "Правила\nи\nБезопасность",
+    "title": "Правила и Безопасность",
     "text_path": "content/info/rules_ru.txt"
     }
  },
@@ -43,7 +43,7 @@
   {
   "stove":
     {
-    "title": "Индукционная Пли",
+    "title": "Индукционная Плита",
     "text_path": "content/info/stove_ru.txt"
     }
   },

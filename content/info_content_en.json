@@ -3,7 +3,7 @@
  {
   "rules":
     {
-    "title": "House Rules\nand\n Safety",
+    "title": "House Rules and Safety",
     "text_path": "content/info/rules_en.txt"
     }
  },
@@ -59,7 +59,7 @@
   {
   "fire":
     {
-    "title": "Fire Pit\nand\nGrill",
+    "title": "Fire Pit and Grill",
     "text_path": "content/info/fire_en.txt"
     }
   },
