@@ -12,7 +12,11 @@
  "arrival":
     { 
     "title": "הגעה",
-    "text_path": "content/info/arrival_he.txt"
+    "text_path": "content/info/arrival_he.txt",
+    "links": 
+     [
+      {"waze": "Waze - מיקום"}
+     ]
     }
   },
   

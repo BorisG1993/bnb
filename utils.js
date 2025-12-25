@@ -72,7 +72,7 @@ export class FrameCreator {
         titleDiv.innerText = topic_content.title;
         frame.appendChild(titleDiv);
 
-        if (topic_images != undefined) {
+        if (topic_images && topic_images.images) {
             const imagesDiv = document.createElement("div");
             imagesDiv.classList.add("frame-images", "dir-sensitive");
             
@@ -99,10 +99,10 @@ export class FrameCreator {
             frame.appendChild(textDiv);
         }
 
-        if (links != undefined) {
+        if (links && topic_content.links) {
             const linksDiv = document.createElement("div");
             linksDiv.classList.add("frame-links", "dir-sensitive");
-                
+             
             topic_content.links.forEach(link => {
                 const a = document.createElement("a");
                 const link_id = this.#getKey(link);
