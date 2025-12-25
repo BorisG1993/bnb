@@ -9,11 +9,15 @@
  },
   
  {
- "arrival":
+  "arrival":
     { 
     "title": "Arrival",
-    "text_path": "content/info/arrival_en.txt"
-    }
+    "text_path": "content/info/arrival_en.txt",
+    "links": 
+    [
+     {"waze": "Waze - Location"}
+    ]
+   }
   },
   
   {

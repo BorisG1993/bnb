@@ -12,7 +12,11 @@
  "arrival":
     { 
     "title": "Прибытие",
-    "text_path": "content/info/arrival_ru.txt"
+    "text_path": "content/info/arrival_ru.txt",
+    "links": 
+     [
+      {"waze": "Waze - Местоположение"}
+     ]
     }
   },
   
